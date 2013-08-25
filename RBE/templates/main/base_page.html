@@ -1,0 +1,21 @@
+{% extends "main/misc_page.html" %}
+
+{% block header %}
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="/">RodgaR Blog Engine</a>
+            <ul class="nav">
+                {% if user.is_authenticated %}
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Админка<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/admin/">Главная</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

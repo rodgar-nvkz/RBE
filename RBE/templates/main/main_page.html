@@ -1,0 +1,14 @@
+{% extends "main/base_page.html" %}
+
+{% block content %}
+    <div class="m-post_container">
+    {% for post in page.object_list %}
+        <div class="m-post_container">
+            <div>{{ post.title }}</div>
+            <div>{{ post.text }}</div>
+        </div>
+    {% empty %}
+        <div><h3>Извините, но в блоге еще нет ни одного поста.</h3></div>
+    {% endfor %}
+    </div>
+{% endblock %}

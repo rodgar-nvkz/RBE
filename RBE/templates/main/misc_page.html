@@ -1,0 +1,28 @@
+{% load bootstrap_toolkit %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    {% block extra_head %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<div class="container">
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+{% bootstrap_javascript_tag %}
+{% block js %}{% endblock %}
+
+<style type="text/css">
+    body {padding-top: 60px;}
+</style>
+{% bootstrap_stylesheet_tag %}
+{% block css %}{% endblock %}
+</body>
+</html>
